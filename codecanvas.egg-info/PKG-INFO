@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: codecanvas
+Version: 1.0.0
+Summary: CodeCanvas é um pacote Python que permite adicionar estilo e formatação visual ao console.
+Author: Jean Branco
+Author-email: jeanlourencobranco13@gmail.com
+License: MIT License
+Keywords: code canvas
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# CodeCanvas
+
+CodeCanvas Ã© um pacote Python que permite adicionar estilo e formataÃ§Ã£o visual ao console.
+
+## Principais Recursos
+
+- Crie textos formatados com cores e estilos personalizados.
+- Personalize a aparÃªncia do console com temas predefinidos ou personalizados.
+
+## InstalaÃ§Ã£o
+
+VocÃª pode instalar o CodeCanvas usando pip:
+
+```
+pip install dist/codecanvas-1.0.0.tar.gz
+```
+
+Infelizmente sÃ³ Ã© possÃ­vel realizar a instalaÃ§Ã£o dessa forma, pois nÃ£o temos um repositÃ³rio no PyPi.
+
+## Uso BÃ¡sico
+
+Para comeÃ§ar a usar o CodeCanvas, importe os mÃ³dulos necessÃ¡rios conforme sua necessidade:
+
+```python
+from codecanvas.color.fore import fore
+from codecanvas.color.back import back
+from codecanvas.item.unordered import unordered
+from codecanvas.item.ordered import ordered
+from codecanvas.line.skip import skip
+from codecanvas.line.vertical import vertical
+from codecanvas.line.horizontal import horizontal
+from codecanvas.style import style
+from codecanvas.text import text
+from codecanvas.title import title
+```
+
+Agora vocÃª pode usar esses mÃ³dulos para adicionar estilo e formataÃ§Ã£o ao seu console.
+
+## MÃ³dulos DisponÃ­veis
+
+### Color
+
+O mÃ³dulo `color` permite personalizar as cores do texto e do fundo.
+
+- `fore(color)`: Retorna o cÃ³digo de escape ANSI para a cor do texto especificada.
+- `back(color)`: Retorna o cÃ³digo de escape ANSI para a cor de fundo especificada.
+
+### Item
+
+O mÃ³dulo `item` oferece funÃ§Ãµes para criar listas de itens ordenadas e nÃ£o ordenadas.
+
+- `ordered(*items)`: Exibe uma lista ordenada dos itens fornecidos.
+- `unordered(*items)`: Exibe uma lista nÃ£o ordenada dos itens fornecidos.
+
+### Line
+
+O mÃ³dulo `line` fornece funÃ§Ãµes para desenhar linhas horizontais e verticais, e para pular linhas.
+
+- `skip(quantity)`: Exibe uma quantidade especificada de linhas em branco.
+- `vertical(height)`: Exibe uma linha vertical de barras verticais ("|") com a altura especificada.
+- `horizontal(width)`: Exibe uma linha horizontal de traÃ§os ("-") com a largura especificada.
+
+### Style
+
+O mÃ³dulo `style` permite aplicar estilos de formataÃ§Ã£o ao texto, como negrito, sublinhado e inversÃ£o.
+
+- `style(decoration)`: Retorna o cÃ³digo de escape ANSI para o estilo de decoraÃ§Ã£o especificado.
+
+### Text
+
+O mÃ³dulo `text` oferece a funÃ§Ã£o `text()` para exibir textos altamente personalizÃ¡veis.
+
+- `text(message)`: Exibe um texto formatado.
+
+### Title
+
+O mÃ³dulo `title` fornece a funÃ§Ã£o `title()` para exibir tÃ­tulos formatados com bordas.
+
+- `title(message)`: Exibe um tÃ­tulo formatado.
+
+## LicenÃ§a
+
+Este projeto Ã© licenciado sob a [MIT License](https://opensource.org/licenses/MIT).

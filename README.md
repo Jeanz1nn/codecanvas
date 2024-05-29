@@ -12,10 +12,8 @@ CodeCanvas é um pacote Python que permite adicionar estilo e formatação visua
 Você pode instalar o CodeCanvas usando pip:
 
 ```
-pip install dist/codecanvas-1.0.0.tar.gz
+pip install codecanvas==1.0.0
 ```
-
-Infelizmente só é possível realizar a instalação dessa forma, pois não temos um repositório no PyPi.
 
 ## Uso Básico
 

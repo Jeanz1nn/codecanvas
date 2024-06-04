@@ -1,6 +1,6 @@
-# CodeCanvas
+# CodeCanvaS
 
-CodeCanvas é um pacote Python que permite adicionar estilo e formatação visual ao console.
+CodeCanvaS é um pacote Python que permite adicionar estilo e formatação visual ao console.
 
 ## Principais Recursos
 

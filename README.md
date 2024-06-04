@@ -12,26 +12,15 @@ CodeCanvas é um pacote Python que permite adicionar estilo e formatação visua
 Você pode instalar o CodeCanvas usando pip:
 
 ```
-pip install dist/codecanvas-1.0.0.tar.gz
+pip install codecanvas==1.0.0
 ```
-
-Infelizmente só é possível realizar a instalação dessa forma, pois não temos um repositório no PyPi.
 
 ## Uso Básico
 
 Para começar a usar o CodeCanvas, importe os módulos necessários conforme sua necessidade:
 
 ```python
-from codecanvas.color.fore import fore
-from codecanvas.color.back import back
-from codecanvas.item.unordered import unordered
-from codecanvas.item.ordered import ordered
-from codecanvas.line.skip import skip
-from codecanvas.line.vertical import vertical
-from codecanvas.line.horizontal import horizontal
-from codecanvas.style import style
-from codecanvas.text import text
-from codecanvas.title import title
+from codecanvas import *
 ```
 
 Agora você pode usar esses módulos para adicionar estilo e formatação ao seu console.
@@ -40,25 +29,25 @@ Agora você pode usar esses módulos para adicionar estilo e formatação ao seu
 
 ### Color
 
-O módulo `color` permite personalizar as cores do texto e do fundo.
+O pacote `color` permite personalizar as cores do texto e do fundo.
 
-- `fore(color)`: Retorna o código de escape ANSI para a cor do texto especificada.
-- `back(color)`: Retorna o código de escape ANSI para a cor de fundo especificada.
+- `color.fore(color)`: Retorna o código de escape ANSI para a cor do texto especificada.
+- `color.back(color)`: Retorna o código de escape ANSI para a cor de fundo especificada.
 
 ### Item
 
-O módulo `item` oferece funções para criar listas de itens ordenadas e não ordenadas.
+O pacote `item` oferece funções para criar listas de itens ordenadas e não ordenadas.
 
-- `ordered(*items)`: Exibe uma lista ordenada dos itens fornecidos.
-- `unordered(*items)`: Exibe uma lista não ordenada dos itens fornecidos.
+- `item.ordered(*items)`: Exibe uma lista ordenada dos itens fornecidos.
+- `item.unordered(*items)`: Exibe uma lista não ordenada dos itens fornecidos.
 
 ### Line
 
-O módulo `line` fornece funções para desenhar linhas horizontais e verticais, e para pular linhas.
+O pacote `line` fornece funções para desenhar linhas horizontais e verticais, e para pular linhas.
 
-- `skip(quantity)`: Exibe uma quantidade especificada de linhas em branco.
-- `vertical(height)`: Exibe uma linha vertical de barras verticais ("|") com a altura especificada.
-- `horizontal(width)`: Exibe uma linha horizontal de traços ("-") com a largura especificada.
+- `line.skip(quantity)`: Exibe uma quantidade especificada de linhas em branco.
+- `line.vertical(height)`: Exibe uma linha vertical de barras verticais ("|") com a altura especificada.
+- `line.horizontal(width)`: Exibe uma linha horizontal de traços ("-") com a largura especificada.
 
 ### Style
 

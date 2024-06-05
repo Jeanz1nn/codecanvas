@@ -1,5 +1,4 @@
 # Color Package
-
 O pacote `color` permite personalizar as cores do texto e do fundo.
 
 ## Back Function

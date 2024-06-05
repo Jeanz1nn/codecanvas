@@ -1,22 +1,27 @@
 # CodeCanvaS
 
-CodeCanvaS é um pacote Python que permite adicionar estilo e formatação visual ao console.
+CodeCanvaS é um pacote Python que permite adicionar estilos ao console.
 
-## Principais Recursos
+## Índice
 
-- Crie textos formatados com cores e estilos personalizados.
-- Personalize a aparência do console com temas predefinidos ou personalizados.
+- [Instalação](#instalação)
+- [Uso Básico](#uso-básico)
+- [Módulos Disponíveis](#módulos-disponíveis)
+  - [Color](#color)
+  - [Style](#style)
+- [Exemplos de Uso](#exemplos-de-uso)
+- [Documentação Completa](#documentação-completa)
+- [Licença](#licença)
 
 ## Instalação
 
 Você pode instalar o CodeCanvas usando pip:
 
-```
-pip install codecanvas==1.0.0
+```sh
+pip install codecanvas
 ```
 
 ## Uso Básico
-
 Para começar a usar o CodeCanvas, importe os módulos necessários conforme sua necessidade:
 
 ```python
@@ -27,46 +32,57 @@ Agora você pode usar esses módulos para adicionar estilo e formatação ao seu
 
 ## Módulos Disponíveis
 
-### Color
-
+## Color
 O pacote `color` permite personalizar as cores do texto e do fundo.
 
-- `color.fore(color)`: Retorna o código de escape ANSI para a cor do texto especificada.
-- `color.back(color)`: Retorna o código de escape ANSI para a cor de fundo especificada.
+`color.fore(color)`: Retorna o código de escape ANSI para a cor do texto especificada.
+`color.back(color)`: Retorna o código de escape ANSI para a cor de fundo especificada.
 
-### Item
+**Cores Disponíveis**
+As cores disponíveis para o texto e fundo são:
 
-O pacote `item` oferece funções para criar listas de itens ordenadas e não ordenadas.
-
-- `item.ordered(*items)`: Exibe uma lista ordenada dos itens fornecidos.
-- `item.unordered(*items)`: Exibe uma lista não ordenada dos itens fornecidos.
-
-### Line
-
-O pacote `line` fornece funções para desenhar linhas horizontais e verticais, e para pular linhas.
-
-- `line.skip(quantity)`: Exibe uma quantidade especificada de linhas em branco.
-- `line.vertical(height)`: Exibe uma linha vertical de barras verticais ("|") com a altura especificada.
-- `line.horizontal(width)`: Exibe uma linha horizontal de traços ("-") com a largura especificada.
+- black
+- red
+- green
+- yellow
+- blue
+- magenta
+- cyan
+- white
 
 ### Style
+O pacote `style` permite aplicar estilos de formatação ao texto, como negrito e sublinhado.
 
-O módulo `style` permite aplicar estilos de formatação ao texto, como negrito, sublinhado e inversão.
+`style.decoration(decoration):` Retorna o código de escape ANSI para o estilo de decoração especificado.
+`style.reset()`: Retorna o código escape ANSI que reseta todos os Estilos e Cores do texto.
 
-- `style(decoration)`: Retorna o código de escape ANSI para o estilo de decoração especificado.
+**Estilos Disponíveis**
+Os estilos disponíveis são:
 
-### Text
+- bold
+- underline
 
-O módulo `text` oferece a função `text()` para exibir textos altamente personalizáveis.
+## Exemplos de Uso
+Aqui estão alguns exemplos de como usar o CodeCanvas para estilizar o texto no console:
 
-- `text(message)`: Exibe um texto formatado.
+```py
+from codecanvas import *
 
-### Title
+# Exemplo de mudança de cor
+print(f"{color.fore('red')}Este texto é vermelho{style.reset()}")
 
-O módulo `title` fornece a função `title()` para exibir títulos formatados com bordas.
+# Exemplo de mudança de fundo
+print(f"{color.back('green')}Este texto tem fundo verde{style.reset()}")
 
-- `title(message)`: Exibe um título formatado.
+# Exemplo de aplicação de estilo
+print(f"{style.decoration('bold')}Este texto é negrito{style.reset()}")
+
+# Combinando cor e estilo
+print(f"{color.fore('blue')}{style.decoration('underline')}Este texto é azul e sublinhado{style.reset()}")
+```
+
+## Documentação Completa
+A documentação completa do pacote CodeCanvaS pode ser encontrada na pasta `doc` dentro do repositório do pacote. Essa documentação fornece detalhes adicionais sobre todas as funcionalidades, exemplos avançados e informações sobre a API.
 
 ## Licença
-
-Este projeto é licenciado sob a [MIT License](https://opensource.org/licenses/MIT).
+Este projeto é licenciado sob a MIT License.

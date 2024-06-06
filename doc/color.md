@@ -13,7 +13,7 @@ color_code = codecanvas.color.back(color)
 **Exemplo de uso:**
 
 ```py
-print(f"{codecanvas.color.back('blue')}Texto com fundo azul{codecanvas.color.back('reset')}")
+print(f"{codecanvas.color.back('blue')}Texto com fundo azul{codecanvas.style.reset()}")
 ```
 
 ## Fore Function
@@ -28,5 +28,5 @@ color_code = codecanvas.color.fore(color)
 **Exemplo de uso:**
 
 ```py
-print(f"{codecanvas.color.fore('green')}Texto em verde{codecanvas.color.fore('reset')}")
+print(f"{codecanvas.color.fore('green')}Texto em verde{codecanvas.style.reset()}")
 ```
